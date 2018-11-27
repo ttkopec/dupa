@@ -1,0 +1,27 @@
+{
+  "functionality": {
+    "on_off": {
+      "commands": [
+        {
+          "cmd": {
+            "value": "on"
+          },
+          "keywords": ["turn on"]
+        }
+      ]
+    }
+  },
+  "rooms": [
+    {
+      "id": "A",
+      "name": "Bedroom",
+      "devices": [
+        {
+          "id": "1",
+          "name": "Lamp",
+          "functionality": ["on_off"]
+        }
+      ]
+    }
+  ]
+}

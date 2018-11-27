@@ -1,0 +1,64 @@
+{
+  "functionality": {
+    "on_off": {
+      "description": "Simple on/off functionality",
+      "commands": [
+        {
+          "cmd": {
+            "value": "on"
+          },
+          "keywords": ["włącz", "załącz", "zapal"]
+        },
+        {
+          "cmd": {
+            "value": "off"
+          },
+          "keywords": ["wyłącz"]
+        }
+      ]
+    },
+    "set_brightness": {
+      "description": "Set brightness within range",
+      "commands": [
+        {
+          "cmd": {
+            "value": "set {device_id} br {value}",
+            "constraints": {
+              "device_id": "\\w+",
+              "value": "[0-16]"
+            }
+          },
+          "keywords": ["ustaw jasność"]
+        }
+      ]
+    }
+  },
+  "rooms": [
+    {
+      "id": "B",
+      "name": "Sypialnia",
+      "devices": [
+        {
+          "id": "1",
+          "name": "Oświetlenie",
+          "functionality": ["on_off"]
+        },
+        {
+          "id": "4",
+          "name": "Lampa",
+          "functionality": ["on_off", "set_brightness"]
+        }
+      ]
+    }, {
+      "id": "C",
+      "name": "Kuchnia",
+      "devices": [
+        {
+          "id": "99",
+          "name": "kuchenka",
+          "functionality": ["on_off"]
+        }
+      ]
+    }
+  ]
+}
